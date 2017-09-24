@@ -2,7 +2,6 @@ import multiprocessing
 import time
 import urllib.request
 
-URL = 'https://api.github.com/events'
 URI = 'https://api.bf4stats.com/api/onlinePlayers?output=json'
 MAX_CLIENTS = 500
 
