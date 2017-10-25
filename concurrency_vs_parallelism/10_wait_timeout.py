@@ -3,13 +3,11 @@ import random
 import asyncio
 import aiohttp
 import argparse
-from collections import namedtuple
 from concurrent.futures import FIRST_COMPLETED
 
-Service = namedtuple('Service', ('name', 'url', 'ip_attr'))
 SERVICES = [{'name': 'ipify', 'url': 'https://api.ipify.org?format=json', 'ip_attr': 'ip'},
             {'name': 'ip-api', 'url': 'http://ip-api.com/json', 'ip_attr': 'query'}]
-TIMEOUT = 0.1  # 3
+TIMEOUT = 0.5  # 3
 
 
 async def find_my_ip(service):
