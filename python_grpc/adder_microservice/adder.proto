@@ -1,0 +1,14 @@
+syntax = "proto3";
+
+message Number {
+    int32 value1 = 1;
+    int32 value2 = 2;
+}
+
+message AddedResult {
+    int32 value = 1;
+}
+
+service Adder {
+    rpc Add(Number) returns (AddedResult) {}
+}

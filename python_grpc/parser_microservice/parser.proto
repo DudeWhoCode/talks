@@ -1,0 +1,13 @@
+syntax = "proto3";
+
+message Expression {
+    string value = 1;
+}
+
+message Result {
+    int32 value = 1;
+}
+
+service Parser {
+    rpc Parse(Expression) returns (Result) {}
+}
